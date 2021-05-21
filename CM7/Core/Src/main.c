@@ -116,11 +116,11 @@ HAL_HSEM_FastTake(HSEM_ID_0);
 HAL_HSEM_Release(HSEM_ID_0,0);
 /* wait until CPU2 wakes up from stop mode */
 timeout = 0xFFFF;
-while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) == RESET) && (timeout-- > 0));
-if ( timeout < 0 )
-{
-Error_Handler();
-}
+//while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) == RESET) && (timeout-- > 0));
+//if ( timeout < 0 )
+//{
+//Error_Handler();
+//}
 /* USER CODE END Boot_Mode_Sequence_2 */
 
   /* USER CODE BEGIN SysInit */
@@ -134,7 +134,7 @@ Error_Handler();
   MX_FDCAN1_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
-  MX_SDMMC1_SD_Init();
+//  MX_SDMMC1_SD_Init();
   MX_SPI2_Init();
   MX_SWPMI1_Init();
   MX_TIM1_Init();
@@ -156,7 +156,7 @@ Error_Handler();
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
+	  HAL_GPIO_TogglePin(LED2_Yellow_GPIO_Port, LED2_Yellow_Pin);
 	  HAL_Delay(500);
 
     /* USER CODE END WHILE */

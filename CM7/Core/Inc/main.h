@@ -58,8 +58,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LD1_Pin GPIO_PIN_0
-#define LD1_GPIO_Port GPIOB
 #define LED3_Red_Pin GPIO_PIN_14
 #define LED3_Red_GPIO_Port GPIOB
 #define STLINK_RX_Pin GPIO_PIN_8
@@ -68,8 +66,8 @@ void Error_Handler(void);
 #define STLINK_TX_GPIO_Port GPIOD
 #define LCD_BACKLIGHT_Pin GPIO_PIN_15
 #define LCD_BACKLIGHT_GPIO_Port GPIOA
-#define LD2_Pin GPIO_PIN_1
-#define LD2_GPIO_Port GPIOE
+#define LED2_Yellow_Pin GPIO_PIN_1
+#define LED2_Yellow_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
